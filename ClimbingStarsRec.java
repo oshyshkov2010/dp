@@ -8,6 +8,10 @@ public class ClimbingStarsRec {
             return 0;
         }
 
+        if (index >= 0) {
+            System.out.print(cost[index] + " ");
+        }
+
         int oneStepCost = minCostClimbingStairsRec(cost, index + 1);
         int twoStepsCost = minCostClimbingStairsRec(cost, index + 2);
 
@@ -16,7 +20,7 @@ public class ClimbingStarsRec {
     }
 
     public static void main(String[] args) {
-        int min = ClimbingStarsRec.minCostClimbingStairs(new int[] {1, 100, 1, 1, 1, 100, 1, 1, 100, 1});
+        int min = ClimbingStarsRec.minCostClimbingStairs(new int[] {3, 5, 1, 4});
         System.out.println(min);
     }
 }
